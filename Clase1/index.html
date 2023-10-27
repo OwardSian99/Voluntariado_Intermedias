@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+
+    <script defer src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"
+        integrity="sha512-dnUg2JxjlVoXHVdSMWDYm2Y5xcIrJg1N+juOuRi0yLVkku/g26rwHwysJDAMwahaDfRpr1AxFz43ktuMPr/l1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Graficas Chart.JS</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo nav-link">Ejemplo Chart.JS</a>
+            <button class="nav-toggle" aria-label="Abrir Menú">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="#" class="nav-menu-item nav-link">Gráfica de Líneas</a>
+                </li>
+                
+                <li class="nav-menu-item">
+                    <a href="#ctn_barras" class="nav-menu-item nav-link">Gráfica de Barras</a>
+                </li>
+
+                <li class="nav-menu-item">
+                    <a href="#ctn_pastel" class="nav-menu-item nav-link">Gráfica de Pie</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+    <div class="login-box">
+      <h2>Registro</h2>
+      <form id="myForm">
+        <div class="user-box">
+          <input type="text" id="nombre" name="nombre" required="">
+          <label>Nombre</label>
+        </div>
+        <div class="user-box">
+          <input type="number" id="edad" name="edad" required="">
+          <label>Edad</label>
+        </div>
+        <button onclick="guardarDatos()" type="button">Enviar</button>
+      </form>
+    </div>
+  </div>
+  <div>
+    <main>
+        <section id = "ctn_lineas" class="ctn_lineas">
+            <h1>Gráfica de Líneas con ChartJS</h1>
+            <canvas id ="lineas" height="300" width="300">
+            </canvas>
+        </section>
+        <section id = "ctn_barras" class="ctn_barras">
+            <h1>Gráfica de Barras con ChartJS</h1>
+            <canvas id ="barras" height="300" width="300">
+            </canvas>
+        </section>
+        <section id = "ctn_pastel" class="ctn_pastel">
+            <h1>Gráfica de Pastel con ChartJS</h1>
+            <canvas id ="pastel" height="300" width="300">
+            </canvas>
+        </section>
+    </main>
+
+</body>
+
+</html>
